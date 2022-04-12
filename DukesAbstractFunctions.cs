@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct DukesAbstractFunctions //Use this struct in Unity Projects
+public struct DUUF //Use this struct in Unity Projects
 {
     public static float CutDecimal(float number)
     {
@@ -12,7 +12,8 @@ public struct DukesAbstractFunctions //Use this struct in Unity Projects
             float z = roundedNumber - number;
             float a = 1 - z;
             return number - a;
-        } else
+        } 
+        else
         {
             return roundedNumber;
         }

@@ -7,6 +7,13 @@ using UnityEngine;
 Quick example of declaration because the requirements field is not a commonly used type
 
 private InputBuffer jumpBuffer = new InputBuffer(Jump, 0.30f, () => isGrounded, () => isWalking, () => health > 0);
+
+Update{
+if (input.jump == true) {
+    jumpBuffer.StartBuffer();
+  }
+ }
+  private void Jump() {}
 */
 
 public class InputBuffer

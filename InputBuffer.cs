@@ -1,6 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
+//Written by Clayton Ives
+
+/*
+Quick example of declaration because the requirements field is not a commonly used type
+
+private InputBuffer jumpBuffer = new InputBuffer(Jump, 0.30f, () => isGrounded, () => isWalking, () => health > 0);
+*/
+
 public class InputBuffer
 {
     public delegate void InputBufferEvent();
@@ -29,7 +37,6 @@ public class InputBuffer
         timer = 0f;
         StartCoroutine(CheckBufferRequirements(requirements));
     }
-
     // Coroutine to check the buffer requirements
     private IEnumerator CheckBufferRequirements(params System.Func<bool>[] requirements)
     {
@@ -54,10 +61,8 @@ public class InputBuffer
                 bufferEvent();
                 break;
             }
-
             yield return null;
         }
-
         bufferStarted = false;
     }
 }
